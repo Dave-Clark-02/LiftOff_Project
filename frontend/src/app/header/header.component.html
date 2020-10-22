@@ -1,7 +1,43 @@
-<!-- <div class="float-left" style="z-index: 2000; position: absolute;"> -->
-    <!-- <a href="#\"><img src="/assets/QE_logo.png" style="width: 18vh; min-width: 120px; margin: 10px 15px"></a> -->
-  <!-- </div> -->
-  
+<nav>
+    <mat-toolbar color="primary">
+      <span>LAN Charty</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="menu-item"  [routerLink]="'/challonge'">
+        Tournaments
+      </button>
+      <button mat-icon-button class="menu-item" [routerLink]="'/user/profile'">
+        Profile
+      </button>
+      <button mat-icon-button class="menu-item" (click)="logout()" [routerLink]="'/login'">
+        Sign out
+      </button>
+      <button mat-icon-button class="menu-item"  [routerLink]="'/seating-chart'">
+        Seating Chart
+      </button>
+    </mat-toolbar>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="float-left" style="z-index: 2000; position: absolute;">
+  <a href="#\"><img src="/assets/QE_logo.png" style="width: 18vh; min-width: 120px; margin: 10px 15px"></a>
+</div>
+
+-->
+<!--  
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   
     <p class="navbar-brand"></p>
@@ -16,26 +52,20 @@
       <ul *ngIf="isLoggedIn" class="navbar-nav ml-auto">
   
         <li class="nav-item">
-          <!--adds space between button and menu items when in dropdown mode-->
+        -->
+          <!--adds space between button and menu items when in dropdown mode
           <span>&nbsp;</span>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/project/list'">MY ESTIMATES</a>
+          <a class="nav-link" [routerLink]="'/challonge'">Tournaments</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="'/user/profile'">MY PROFILE</a>
+          <a class="nav-link" [routerLink]="'/user/profile'">Profile</a>
         </li>
     
         <li class="nav-item">
-          <a class="nav-link" (click)="logout()" [routerLink]="'/login'">LOG OUT</a>
+          <a class="nav-link" (click)="logout()" [routerLink]="'/login'">Sign out</a>
         </li>
       </ul>
-  
-  
-      
     </div>
-  
-  
-  
-  
-  </nav>
+  </nav> -->

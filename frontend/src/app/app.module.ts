@@ -19,6 +19,8 @@ import {authInterceptorProviders} from './_helpers/auth.interceptor';
 import { ChallongeComponent } from './challonge/challonge.component';
 import { SeatingChartComponent } from './seating-chart/seating-chart.component';
 
+// import UI components
+import {MaterialModule} from './material.module'
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import { SeatingChartComponent } from './seating-chart/seating-chart.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
