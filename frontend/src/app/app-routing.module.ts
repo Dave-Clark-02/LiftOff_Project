@@ -10,6 +10,7 @@ import { SiteUserComponent } from './site-user/site-user.component';
 import { ChallongeComponent } from './challonge/challonge.component';
 import { SeatingChartComponent } from './seating-chart/seating-chart.component';
 
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {path: 'user/profile' , component: ProfileComponent},

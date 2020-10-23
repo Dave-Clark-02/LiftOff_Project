@@ -1,0 +1,14 @@
+mat-card.registerForm {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:15px;
+    position: relative;
+}
+
+mat-form-field {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
