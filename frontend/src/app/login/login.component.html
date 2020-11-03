@@ -1,1 +1,47 @@
-<p>login works!</p>
+<mat-card class="registerForm">
+
+    <form [formGroup]="registerForm"
+    *ngIf="!isSuccessful"
+    name="form"
+    (ngSubmit)="f.form.valid && onSubmit()"
+    #f="ngForm"
+      novalidate
+    >
+          
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your Username</mat-label>
+        <input matInput placeholder="Username" formControlName="username" type="text">
+        <mat-error *ngIf="registerForm.hasError('required', ['username'])">Username is required</mat-error>
+        <mat-error *ngIf="registerForm.hasError('minlength', ['username'])">Minimum length is 3 characters</mat-error>
+        <mat-error *ngIf="registerForm.hasError('maxlength', ['username'])">Maximum length is 20 characters</mat-error>
+      </mat-form-field>
+                                                          
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="youremailhere@gmail.com" formControlName="email" type="email">
+        <mat-error *ngIf="registerForm.hasError('required', ['email'])">Email is required</mat-error>
+        <mat-error *ngIf="registerForm.hasError('pattern', ['email'])">A valid email is required</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" formControlName="password" type="password">
+        <mat-error *ngIf="registerForm.hasError('required', ['password'])">Password is required</mat-error>
+        <mat-error *ngIf="registerForm.hasError('minlength', ['password'])">Minimum length is 6 characters</mat-error>
+      </mat-form-field>
+  
+      
+      <button mat-raised-button color="primary" [disabled]="registerForm.invalid">Log in</button>
+        
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+  
+        <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+          Signup failed!<br />{{ errorMessage }}
+        </div>
+      </form>
+  
+      <div class="alert alert-success" *ngIf="isSuccessful">
+        Your login is successful!
+      </div>
+  
+  </mat-card>

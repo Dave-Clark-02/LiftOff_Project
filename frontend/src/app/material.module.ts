@@ -10,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input'
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MatInputModule } from '@angular/material/input'
       MatToolbarModule,
       MatFormFieldModule,
       MatInputModule,
-      MatCardModule
+      MatCardModule,
+      MatTooltipModule
     ],
     exports: [
       MatButtonModule,
@@ -31,7 +33,8 @@ import { MatInputModule } from '@angular/material/input'
       MatToolbarModule,
       MatFormFieldModule,
       MatInputModule,
-      MatCardModule
+      MatCardModule,
+      MatTooltipModule
     ]
   })
   export class MaterialModule {}

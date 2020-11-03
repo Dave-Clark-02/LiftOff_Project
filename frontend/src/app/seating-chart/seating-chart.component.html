@@ -1,5 +1,31 @@
-<table class="table">
+<div class="row-wrapper">
+  <h2>Seat Legend:</h2>
+  <span class="seat-sold seat">X</span> = sold out
+</div>
+
+<!-- first loop through array of unique rows -->
+<div *ngFor="let row of rowsArray" class="row-wrapper">
+  <!-- print row number -->
+  <div class="row">
+    <div class="row-name">{{row}}</div>
+    
+      <!-- loop through full seating data -->
+      <div *ngFor="let data of dummyData">
+        <!-- if row in first loop matches the row in the dummyData[i] loop. then print seat info -->
+        <div *ngIf="row == data.seat_row" class="seat" [ngClass]="{'seat-sold': data.seat_sold_ind === 1, 'seat-not-sold': data.seat_sold_ind === 0 }"  [matTooltip]="data.username">
+          {{data.seat_num}}
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- <table class="table">
     <thead>
+
+     
+
+
       <tr>
         <td></td>
         <td>1</td>
@@ -53,4 +79,4 @@
         <td style="background-color:blue;"></td>
       </tr>
     </tbody>
-    </table>
+    </table> -->

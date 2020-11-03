@@ -1,3 +1,41 @@
+.row-wrapper{
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.row{
+ display: flex;
+ flex-wrap: nowrap;
+ justify-content: flex-start;
+ padding: 15px 5px;
+ border: thin solid #ccc
+}
+
+.row-name{
+  padding: 5px 15px 5px 0;
+  font-weight: bold;
+}
+
+.seat {
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: thin solid #ccc;
+}
+
+.seat-sold{
+  background-color: #3f51b5; 
+  color: #fff;
+}
+
+.seat-not-sold {
+  background-color: green;
+}
+
 .table tbody tr td:not(:first-child) {
     border: 1px solid blue;
     width: 1em;
